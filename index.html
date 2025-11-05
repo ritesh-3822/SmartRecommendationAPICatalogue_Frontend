@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chat — Springboard Client</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="app">
+    <!-- Sidebar: Chat History -->
+    <aside class="sidebar" aria-label="Chat history">
+      <div class="sidebar-header">
+        <h1 class="brand">Springboard Chat</h1>
+        <button id="newChatBtn" class="btn btn-secondary" title="Start a new chat">+ New chat</button>
+      </div>
+      <nav id="historyList" class="history-list" aria-live="polite">
+        <!-- Filled by JS -->
+      </nav>
+
+      <div class="sidebar-footer">
+        <a class="link" href="./submit.html">➕ Submit an API</a>
+      </div>
+    </aside>
+
+    <!-- Main: Chat + API Bar -->
+    <main class="main">
+      <!-- API Bar -->
+      <section class="api-bar" aria-label="API list">
+        <div class="api-bar-header">
+          <h2>APIs</h2>
+          <button id="refreshApisBtn" class="btn btn-icon" title="Refresh APIs" aria-label="Refresh APIs">↻</button>
+        </div>
+        <div id="apiList" class="api-list">
+          <!-- Filled by JS -->
+        </div>
+      </section>
+
+      <!-- Chat -->
+      <section class="chat">
+        <div id="messages" class="messages" aria-live="polite" aria-busy="false">
+          <!-- Filled by JS -->
+        </div>
+
+        <form id="chatForm" class="chat-input" autocomplete="off">
+          <input
+            id="userInput"
+            class="input"
+            name="prompt"
+            type="text"
+            placeholder="Message Springboard…"
+            aria-label="Type your message"
+            required
+          />
+          <button id="sendBtn" class="btn btn-primary" type="submit" aria-label="Send message">Send</button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <template id="messageTemplate">
+    <div class="message">
+      <div class="bubble"></div>
+      <div class="meta"></div>
+    </div>
+  </template>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>

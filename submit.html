@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Submit an API — Springboard Client</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="submit-page">
+    <header class="submit-header">
+      <h1>Submit an API</h1>
+      <a class="link" href="./index.html">← Back to Chat</a>
+    </header>
+
+    <form id="submitForm" class="card" novalidate>
+      <div class="form-row">
+        <label for="apiName">API Name</label>
+        <input id="apiName" name="name" type="text" class="input" placeholder="e.g., WeatherNow" required />
+        <small id="nameHelp" class="muted">Choose a unique, human-readable name.</small>
+      </div>
+
+      <div class="form-row">
+        <label for="apiDesc">API Description</label>
+        <textarea id="apiDesc" name="description" class="input textarea" placeholder="Describe what the API does…" required></textarea>
+      </div>
+
+      <div class="actions">
+        <button id="dupCheckBtn" type="button" class="btn btn-secondary">Check Duplicate</button>
+        <button id="submitApiBtn" type="submit" class="btn btn-primary" disabled>Submit API</button>
+      </div>
+
+      <div id="submitStatus" class="status" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+
+  <script src="./submit.js" defer></script>
+</body>
+</html>
